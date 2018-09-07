@@ -1,0 +1,19 @@
+.myprofile {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .profile-full-width {
+    width: 100%;
+  }
+  
+  .submit {
+    margin-bottom: 15px;
+  }
+  
+  .title {
+    text-align: center;
+    color: #3F51B5
+  }
+  

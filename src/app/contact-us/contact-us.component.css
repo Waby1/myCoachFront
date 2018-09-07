@@ -1,14 +1,13 @@
-
-
-title {
+mat-form-field {
+    width: 600px;
+  }
+  
+  .contactUsText {
     font-family: Roboto, "Helvetica Neue", sans-serif;
   }
   
   .title {
     text-align: center;
-  }
-  
-  .section {
-    height: 100%;
+    color: #3F51B5
   }
   

@@ -1,0 +1,31 @@
+
+
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav position="start" #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
+    
+    <!--ici c'est la barre de menu laterale , je mets la couleur souhaitée type bleu pour primary , warn pour rouge etc et le nom du titre lateral-->
+    <mat-toolbar color="primary">My Coach !</mat-toolbar>
+
+    <mat-nav-list>
+      <!--    ici je dis qu'a l'endroit ou s'affiche  My Profile : j'affiche le composant souhaité :  car avant j'ai fait un path dans le app.module.ts qui decrit que a l'extension /myprofile : j'affiche le composant myprofileComponent : grae au module RouterModule, Route  -->
+      <a mat-list-item routerLink="/workout"> My Workout </a>
+      <a mat-list-item routerLink="/program">My Program </a>
+      <a mat-list-item routerLink="/performances">My Performances </a>
+      <a mat-list-item routerLink="/exercices">My Exercices </a>
+      <a mat-list-item routerLink="/profile">My Profile </a>
+      <a mat-list-item routerLink="/contactus">Contact Us </a>
+
+    </mat-nav-list>
+
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    
+    <router-outlet></router-outlet>
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

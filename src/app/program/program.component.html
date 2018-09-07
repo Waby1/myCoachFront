@@ -1,0 +1,22 @@
+<div class="title">
+  <h1>
+   - My Program -
+   </h1>
+  <img width="160" alt="Nutrapp Logo"
+       src="https://www.campingmonacoparc.com/xusers/campingmonacoparc.com/doc/users/1/bib/noun_882_cc_6451.png">
+
+       <h3> " Here to check my workouts ! "</h3>
+</div>
+
+
+
+<mat-tab-group>
+  <mat-tab *ngFor="let workout of workouts" label="{{workout.name}}">
+    <p *ngFor="let exercice of workout.exercices">  ( Exercice : {{exercice.exerciceType.name}} ) - ( Nb Of Set : {{exercice.set}} ) - ( Nb of Rep : {{exercice.rep}} ) </p>
+    
+  </mat-tab>
+  
+</mat-tab-group>
+
+
+

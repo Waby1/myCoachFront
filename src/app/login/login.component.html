@@ -1,0 +1,42 @@
+<div class="title">
+  <h1>
+   Welcome to My Coach ! 
+  </h1>
+  <img width="160" alt="Nutrapp logo"
+       src="https://www.campingmonacoparc.com/xusers/campingmonacoparc.com/doc/users/1/bib/noun_882_cc_6451.png">
+</div>
+
+<br>
+<br>
+<br>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" [formControl]="emailFormControl"
+           [errorStateMatcher]="matcher">
+    <mat-hint></mat-hint>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+
+<form class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+  </mat-form-field>
+</form>
+
+<div>
+  <mat-checkbox>Remember me!</mat-checkbox>
+</div>
+
+<div class="register">
+  <button mat-basic-chip="" routerLink="/register">Not register yet, Create an account</button>
+</div>
+
+<button class="connectme" mat-raised-button color="primary">Connect me</button>

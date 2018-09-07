@@ -1,0 +1,49 @@
+table {
+  width: auto;
+  }
+
+  button {
+    margin: 16px 8px;
+  }
+
+  .title {
+    text-align: center;
+    color: #3F51B5
+  }
+
+  .saisie {
+    height:170px;
+    width:10px;
+
+  }
+
+  .mat-chip {
+    font-size: large;
+    font-family:verdana, sans-serif;
+    height: 50px;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+.error {
+  color: darkred;
+  margin-bottom: 15px;
+}
+
+.list {
+  margin-top: 40px;
+}
+
+.saveFavM {
+  display: flex;
+  align-items: center;
+}
+
+.mat-raised-button {
+  min-width: auto;
+}
+
+h3 {
+text-align: center;
+color: #3F51B5;
+}
