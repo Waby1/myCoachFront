@@ -1,3 +1,5 @@
+
+
 // je creer ma classe workout et ExerciceType
 
 export class Workout {
@@ -17,4 +19,11 @@ export class Exercice {
     set: number;
     rep: number;
     exerciceType: ExerciceType;
+}
+
+export class Performance {
+id: number;
+exercice: string;
+max: number;
+date: string;
 }

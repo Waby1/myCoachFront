@@ -8,28 +8,34 @@
 
 <div>
 
-    <h1>
-        Save Max
-      </h1>
+  <h1>
+    Save Max
+  </h1>
 
-  <br>
-  <mat-form-field>
-    <input matInput placeholder="Exercice">
-  </mat-form-field>
 
-  <mat-form-field>
-    <input matInput placeholder="Max Charge">
-  </mat-form-field>
+  <div>
 
-  <mat-form-field>
-    <input matInput placeholder="Date" >
-  </mat-form-field>
-</div>
-<br>
-<div>
-  <button mat-raised-button color="primary" (click)="saveMax()">Save my Max ! </button>
+    <mat-form-field class="exercice">
+      <input matInput type="text" [(ngModel)]="exercice" placeholder="Exercice">
+    </mat-form-field>
 
-</div>
-<h1>
-   Saved Max
+    <mat-form-field class="max">
+      <input matInput type="number" [(ngModel)]="max" placeholder="Charge Max">
+    </mat-form-field>
+
+    <mat-form-field class="date">
+      <input matInput type="text" [(ngModel)]="date" placeholder="Date Perf">
+    </mat-form-field>
+
+
+  </div>
+
+
+  <div>
+    <button mat-raised-button color="primary" (click)="savePerformance()">Save my Max ! </button>
+  </div>
+
+
+  <h1>
+    Saved Max
   </h1>
