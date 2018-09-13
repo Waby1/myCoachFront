@@ -1,12 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { Observable } from 'rxjs';
-
-import { Workout } from '../workout';
-
-
-
+import { Workout } from './workout';
 
 
 @Injectable({

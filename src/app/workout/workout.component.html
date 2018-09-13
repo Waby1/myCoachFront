@@ -1,35 +1,38 @@
-
 <div class="title">
   <h1>
-   - My Workout -
-   </h1>
-  <img width="160" alt="Nutrapp Logo"
-       src="https://www.campingmonacoparc.com/xusers/campingmonacoparc.com/doc/users/1/bib/noun_882_cc_6451.png">
+    - My Workout -
+  </h1>
+  <img width="160" alt="Nutrapp Logo" src="https://www.campingmonacoparc.com/xusers/campingmonacoparc.com/doc/users/1/bib/noun_882_cc_6451.png">
 </div>
 
 <h3>" Let's create my workouts ! " </h3>
 
-<br>
+
+
+<div class="saveFavM">
+  <mat-form-field>
+    <input matInput type="text" placeholder=" Name of my Workout " [(ngModel)]="nameWorkout"> </mat-form-field>
+</div>
+
 <div class="saisie">
 
-  
-    
   <form class="example-form">
-     
+
     <mat-form-field class="example-full-width">
 
-           
-      <input type="text" placeholder="Assignee" [(ngModel)]="selectedExerciceType" #alim placeholder="Exercice" matInput
-             [formControl]="myControl"
-             [matAutocomplete]="auto">
+      <input type="text" placeholder="Assignee" [(ngModel)]="selectedExerciceType" #alim placeholder="Exercice" matInput [formControl]="myControl"
+        [matAutocomplete]="auto">
       <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+
         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
           {{option.name}}
         </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
-  </form>
 
+      </mat-autocomplete>
+
+    </mat-form-field>
+
+  </form>
 
   <mat-form-field class="set">
     <input matInput type="number" [(ngModel)]="set" placeholder="Number of set">
@@ -43,27 +46,20 @@
 </div>
 
 
-<ul class="list">
-  <li *ngFor=" let exercice of exercices" >
-        Exercice added :  {{exercice.exerciceType.name}} - Number of set : {{exercice.set}} - Number of rep : {{exercice.rep}} 
-
-   </li>
-</ul>
-
-
 <div>
-  <button mat-raised-button color="link"
-         (click)="addExercice()">
+  <button mat-raised-button color="link" (click)="addExercice()">
     Add exercice
   </button>
-  <div class="error">{{errormessage}}</div>
-  
-  <br> 
-  <span class="error">{{errormessageMenu}}</span>
-  
 
-  <div class="saveFavM">
-      <mat-form-field> <input matInput type="text" placeholder=" Name of my Workout " [(ngModel)]="nameWorkout"> </mat-form-field>
-    <button mat-raised-button color="primary" (click)="createWorkout()">Save my Workout ! </button>
-    <button mat-raised-button color="warn" (click)="resetCharge()">Delete all</button>
-  </div>
+  <button mat-raised-button color="primary" (click)="createWorkout()">Save my Workout ! </button>
+  <button mat-raised-button color="warn" (click)="resetCharge()">Delete all</button>
+
+  <div class="error">{{errormessage}}</div>
+  <span class="error">{{errormessageMenu}}</span>
+
+
+  <ul class="list">
+    <li *ngFor=" let exercice of exercices">
+      Exercice added : {{exercice.exerciceType.name}} - Number of set : {{exercice.set}} - Number of rep : {{exercice.rep}}
+    </li>
+  </ul>

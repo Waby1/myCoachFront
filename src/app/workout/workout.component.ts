@@ -5,8 +5,10 @@ import { FormControl } from '@angular/forms';
 import { tap, startWith, map } from 'rxjs/operators';
 
 import { Exercice, ExerciceType, Workout } from '../workout';
-import { ExerciceTypeService } from '../exercicesType.service';
-import { WorkoutService } from './workout.service';
+
+import { WorkoutService } from '../workout.service';
+import { ExerciceTypeService } from '../exercices/exercicestype.service';
+
 
 @Component({
   selector: 'app-workout',

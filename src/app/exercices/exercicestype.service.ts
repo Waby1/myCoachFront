@@ -2,8 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
+import { ExerciceType } from '../workout';
 
-import { ExerciceType } from './workout';
+
+
+
 
 
 //  ATTENTION ICI NOMRMALEMENT LE NOM DU SERVICE CEST EXERCICE TYPE

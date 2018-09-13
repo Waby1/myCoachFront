@@ -7,12 +7,14 @@
 
        <h3> " Here to check my workouts ! "</h3>
 </div>
-
+<h1>
+    Workouts created
+  </h1>
 
 
 <mat-tab-group>
   <mat-tab *ngFor="let workout of workouts" label="{{workout.name}}">
-    <p *ngFor="let exercice of workout.exercices">  ( Exercice : {{exercice.exerciceType.name}} ) - ( Nb Of Set : {{exercice.set}} ) - ( Nb of Rep : {{exercice.rep}} ) </p>
+    <p *ngFor="let exercice of workout.exercices">  ( Exercice : {{exercice.exerciceType.name}} ) - ( Nb of Sets : {{exercice.set}} ) - ( Nb of Reps : {{exercice.rep}} ) </p>
     
   </mat-tab>
   

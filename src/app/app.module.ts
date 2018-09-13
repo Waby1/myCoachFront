@@ -38,6 +38,7 @@ import { WorkoutComponent } from './workout/workout.component';
 import { ProgramComponent } from './program/program.component';
 import { PerformancesComponent } from './performances/performances.component';
 import { ExercicesComponent } from './exercices/exercices.component';
+import { MaxComponent } from './max/max.component';
 
 const routes: Routes = [
 {path: '', component: LoginComponent},
@@ -47,6 +48,7 @@ const routes: Routes = [
 {path: 'exercices', component: ExercicesComponent},
 {path: 'workout', component: WorkoutComponent},
 {path: 'performances', component: PerformancesComponent},
+{path: 'max', component: MaxComponent}
 
 ];
 
@@ -65,6 +67,7 @@ const routes: Routes = [
     ProgramComponent,
     PerformancesComponent,
     ExercicesComponent,
+    MaxComponent,
   ],
 
 
