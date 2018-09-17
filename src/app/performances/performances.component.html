@@ -12,8 +12,7 @@
     Save Max
   </h1>
 
-
-  <div>
+    <div>
 
     <mat-form-field class="exercice">
       <input matInput type="text" [(ngModel)]="exercice" placeholder="Exercice">
@@ -39,3 +38,12 @@
   <h1>
     Saved Max
   </h1>
+  <ul>
+
+    <li *ngFor="let performance of performances ">  ( Exercice : {{performance.exercice}} ) - ( Charge Max : {{performance.max}} ) - ( Date performance :  {{performance.date}} )  </li> 
+  
+    </ul>
+
+
+  
+    

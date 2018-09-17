@@ -14,6 +14,7 @@ export class PerformancesComponent implements OnInit {
   performances: Performance[] = [];
 filteredOption: Observable<Performance[]> = null;
 myControl = new FormControl();
+
 date: string;
 exercice: string ;
 max: number;
