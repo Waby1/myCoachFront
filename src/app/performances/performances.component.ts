@@ -18,7 +18,7 @@ myControl = new FormControl();
 date: string;
 exercice: string ;
 max: number;
-
+completemsg = '';
 
   constructor(private performanceService: PerformanceService) { }
 
@@ -44,6 +44,7 @@ performance.max = this.max;
 console.log(performance);
 this.performanceService.savePerformance(performance).subscribe((newPerformance: Performance) => {
 console.log(newPerformance);
+this.completemsg = 'My performance is saved . Press F5 or refresh to check it';
 });
 }
 

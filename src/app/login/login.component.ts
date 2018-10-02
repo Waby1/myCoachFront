@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   hide = true;
   emailFormControl = new FormControl('', [
     Validators.required,
-    Validators.email,]);
+    Validators.email, ]);
   matcher = new MyErrorStateMatcher();
 
 

@@ -23,12 +23,14 @@ export class WorkoutComponent implements OnInit {
   exerciceTypes: ExerciceType[] = [];
   filteredOptions: Observable<ExerciceType[]> = null;
   selectedExerciceType: ExerciceType = null;
+  selectedExercices: Exercice = null;
   repetition: number = null;
   set: number = null;
   nameWorkout: string = null;
   myControl = new FormControl();
   errormessage = '';
   errormessageMenu = '';
+  completemsg = '';
 
   constructor(private exercicetypeService: ExerciceTypeService , private workoutservice: WorkoutService) {
 
@@ -39,13 +41,14 @@ export class WorkoutComponent implements OnInit {
   }
 
   // methode pour reseter la page et les champs
+  resetForm() {
 
-  resetCharge() {
-    console.log('resetCharge - Cleaning dataSource');
-    this.errormessage = '';
-    this.selectedExerciceType = null;
+    this.repetition = 0;
+    this.set = 0;
+    this.selectedExerciceType = new ExerciceType() ;
+    this.exercices = [] ;
 
-  }
+ }
 
 
   // methode pour refresher la page
@@ -108,12 +111,16 @@ export class WorkoutComponent implements OnInit {
    // la liste des exo et le sauvegarder , qui sera de l'envoyer au svce .et ajouter le controle
 
 
-  createWorkout() {
+
+
+   createWorkout() {
     const workout = new Workout();
     workout.name = this.nameWorkout;
     workout.exercices = this.exercices;
     this.workoutservice.save(workout).subscribe() ;
-          this.resetExerciceForm();
+          this.resetForm();
+          this.completemsg = 'My Workout is saved ! Check into My Program section ! ';
+
 
   }
 
