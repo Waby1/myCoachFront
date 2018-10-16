@@ -6,14 +6,14 @@
   <h3> " Memorize my maxi perfs ! " </h3>
 </div>
 
+
+<h1>
+    Save My Max ! 
+</h1>
+
+
+
 <div>
-
-  <h1>
-    Save Max
-  </h1>
-
-    <div>
-
     <mat-form-field class="exercice">
       <input matInput type="text" [(ngModel)]="exercice" placeholder="Exercice">
     </mat-form-field>
@@ -23,28 +23,29 @@
     </mat-form-field>
 
     <mat-form-field class="date">
-      <input matInput type="text" [(ngModel)]="date" placeholder="Date Perf">
+      <input matInput type="date" [(ngModel)]="date ">
     </mat-form-field>
+</div>
 
-
+<div>
+    <button mat-raised-button color="primary" (click)="savePerformance()">Save it ! </button>
+      
   </div>
-
-
-  <div>
-    <button mat-raised-button color="primary" (click)="savePerformance()">Save my Max ! </button>
-  </div>
-  <br>
+<br>
+  
   <div class="save">{{completemsg}}</div>
 
   <h1>
-    Saved Max
+    My Performances Saved !
   </h1>
-  <ul>
+  <!-- <button mat-raised-button color="primary" (click)="getPerformance()">Show me ! </button>  -->
+  <ul class="list">
 
     <li *ngFor="let performance of performances ">  ( Exercice : {{performance.exercice}} ) - ( Charge Max : {{performance.max}} ) - ( Date performance :  {{performance.date}} )  </li> 
   
     </ul>
 
-
-  
-    
+    <br>
+    <br>
+    <br>
+    <br>

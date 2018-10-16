@@ -3,6 +3,7 @@ import { Performance } from '../workout';
 import { PerformanceService } from '../performance.service';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-performances',
@@ -11,11 +12,12 @@ import { FormControl } from '@angular/forms';
 })
 export class PerformancesComponent implements OnInit {
 
-  performances: Performance[] = [];
+performances: Performance[] = [];
 filteredOption: Observable<Performance[]> = null;
 myControl = new FormControl();
 
-date: string;
+
+date: Date;
 exercice: string ;
 max: number;
 completemsg = '';
@@ -27,12 +29,18 @@ completemsg = '';
   this.getPerformance();
   }
 
-  getPerformance() {
+
+
+
+
+
+
+ getPerformance() {
 this.performanceService.getPerformance().subscribe((listPerformances) => {
 console.log(listPerformances);
 this.performances = listPerformances;
 });
-  }
+ }
 
 
 
@@ -44,7 +52,11 @@ performance.max = this.max;
 console.log(performance);
 this.performanceService.savePerformance(performance).subscribe((newPerformance: Performance) => {
 console.log(newPerformance);
-this.completemsg = 'My performance is saved . Press F5 or refresh to check it';
+// this.completemsg = 'My performance for' + ' - ' + this.exercice + ' - ' + 'is saved !' ;
+
+this.performanceService.getPerformance().subscribe((listPerformances) => {
+  this.performances = listPerformances;
+  });
 });
 }
 

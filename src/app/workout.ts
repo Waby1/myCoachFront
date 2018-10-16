@@ -25,5 +25,5 @@ export class Performance {
 id: number;
 exercice: string;
 max: number;
-date: string;
+date: Date;
 }
